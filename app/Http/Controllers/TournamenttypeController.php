@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use App\Tournamenttype;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,9 @@ class TournamenttypeController extends Controller
      */
     public function index()
     {
-        //
+        $ties = DB::table('tournamenttypes')
+                ->get();
+        return view('tournamenttype.index',compact('ties'));
     }
 
     /**
@@ -24,7 +27,7 @@ class TournamenttypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('tournamenttype.create');
     }
 
     /**
@@ -35,7 +38,12 @@ class TournamenttypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tie = new Tournamenttype;
+        $tie->typename = $request->typename;
+        $tie->save();
+
+
+        return redirect('/tournamenttype');
     }
 
     /**
@@ -46,7 +54,8 @@ class TournamenttypeController extends Controller
      */
     public function show(Tournamenttype $tournamenttype)
     {
-        //
+        $tie = Tournamenttype::find($id);
+        return view('tournamenttype.edit', compact('tie'));
     }
 
     /**
@@ -55,9 +64,10 @@ class TournamenttypeController extends Controller
      * @param  \App\Tournamenttype  $tournamenttype
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tournamenttype $tournamenttype)
+    public function edit($id)
     {
-        //
+        $tie = Tournamenttype::find($id);
+        return view('tournamenttype.edit', compact('tie'));
     }
 
     /**
@@ -67,9 +77,13 @@ class TournamenttypeController extends Controller
      * @param  \App\Tournamenttype  $tournamenttype
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tournamenttype $tournamenttype)
+    public function update(Request $request, $id)
     {
-        //
+        $tie = Tournamenttype::find($id);
+        $tie->typename = $request->typename;
+        $tie->update();
+
+        return redirect('/tournamenttype');
     }
 
     /**
@@ -78,8 +92,12 @@ class TournamenttypeController extends Controller
      * @param  \App\Tournamenttype  $tournamenttype
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tournamenttype $tournamenttype)
+    public function destroy($id)
     {
+        
+        $post = Tournamenttype::find($id);
+        $post -> delete();
+        return redirect('/tournamenttype');
         //
     }
 }

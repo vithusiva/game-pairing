@@ -40,17 +40,24 @@
             </a><!-- br-menu-link -->
           </li><!-- br-menu-item -->
           <li class="br-menu-item">
-            <a href="{{ route('post.index') }}" class="br-menu-link ">
-              <i class="menu-item-icon icon ion-ios-gear-outline tx-24"></i>
-              <span class="menu-item-label">Create Post</span>
-            </a><!-- br-menu-link -->
-          </li><!-- br-menu-item -->
-          <li class="br-menu-item">
             <a href="{{ route('tiebreak.index') }}" class="br-menu-link ">
               <i class="menu-item-icon icon ion-ios-gear-outline tx-24"></i>
               <span class="menu-item-label">TieBreak</span>
             </a><!-- br-menu-link -->
           </li><!-- br-menu-item -->
+          <li class="br-menu-item">
+            <a href="{{ route('tournamenttype.index') }}" class="br-menu-link ">
+              <i class="menu-item-icon icon ion-ios-gear-outline tx-24"></i>
+              <span class="menu-item-label">Tournament Type</span>
+            </a><!-- br-menu-link -->
+          </li><!-- br-menu-item -->
+          <li class="br-menu-item">
+            <a href="{{ route('post.index') }}" class="br-menu-link ">
+              <i class="menu-item-icon icon ion-ios-gear-outline tx-24"></i>
+              <span class="menu-item-label">Create Post</span>
+            </a><!-- br-menu-link -->
+          </li><!-- br-menu-item -->
+          
 
          
 

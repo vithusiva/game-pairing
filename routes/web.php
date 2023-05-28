@@ -41,6 +41,7 @@ Route::get('/',function(){
 // //Route::resource('player','PlayerController');
 Route::resource('post','postController');
 Route::resource('tiebreak','TieBreakController');
+Route::resource('tournamenttype','TournamenttypeController');
 Route::resource('student1','StudentController');
 
 Route::resource('player','PlayerController');
