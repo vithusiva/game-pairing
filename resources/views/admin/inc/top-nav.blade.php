@@ -23,8 +23,6 @@
 
               <hr>
               <ul class="list-unstyled user-profile-nav">
-                <li><a href="{{ route('user.profile') }}" target="_blank"><i class="icon ion-ios-glob"></i> View Profile</a></li>
-                <li><a href="{{ route('password.edit') }}"><i class="icon ion-ios-gear"></i> Reset Password</a></li>
                 <li><a href="javascript:void(0)" onclick="$('form.logout').submit();"><i class="icon ion-power"></i> Sign Out</a></li>
               </ul>
 

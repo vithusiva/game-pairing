@@ -4,7 +4,7 @@
 
 <tr>
     <th>ID</th>
-    <th>Tournament Type Name</th>
+    <th>Tournament Type</th>
    
 </tr>
 

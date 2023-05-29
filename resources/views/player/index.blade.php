@@ -10,11 +10,9 @@
 <table class="table table-striped">
     <tr>
         <th class="wd-15p ">Id</th>
-        <!-- <th class="wd-15p ">Full Name</th> -->
-        <th class="wd-15p ">Team Name</th>
+        <th class="wd-15p ">Team/Player Name</th>
         <th class="wd-15p ">Gender</th>
         <th class="wd-15p ">Insitution</th>
-        <!-- <th class="wd-15p ">Date of Birth</th> -->
         <th class="wd-15p ">Tournament Name</th>
         <th colspan="3">Actions</th>
     </tr>
@@ -22,11 +20,9 @@
     @foreach($players as $player)
     <tr>
         <td>  {{$player->id}}</td>
-        <!-- <td>  {{$player->playername}}</td> -->
         <td>  {{$player->namewithInitial}}</td>
         <td>  {{$player->gender}}</td>
         <td>  {{$player->insitution}}</td>
-        <!-- <td>  {{$player->dob}}</td> -->
         <td>  {{optional($player->tournament)->name}}</td>
         <td>
         <form action= "{{route('player.destroy',$player->id)}}" method = "post">
@@ -50,7 +46,7 @@
     <tr>
         <td>
             <form action= "{{route('player.create')}}" method = "get">
-                <input type ="Submit" value = "Add Team" />
+                <input type ="Submit" value = "Add Team/Player" />
             </form>
         </td>
         </tr>

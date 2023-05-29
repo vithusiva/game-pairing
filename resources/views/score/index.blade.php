@@ -4,21 +4,14 @@
 
     <tr>
         <th>Tournament</th>
-        <!-- <th>Team ID</th> -->
         <th>Team Name</th>
         <th>Game points</th>
-        <!-- <th>Match points</th>
-        <th>rank</th> -->
     </tr>
     @foreach($scores as $score)
     <tr>
-        <!-- <td>  {{$score->tournament_id}}</td> -->
         <td> {{optional($score->tournament)->name}}</td>
-        <!-- <td>  {{$score->player_id}}</td> -->
         <td>  {{$score->namewithInitial}}</td>
         <td>  {{$score->gamepoints}}</td>
-        <!-- <td>  {{$score->matchpoints}}</td>
-        <td>  {{$score->rank}}</td> -->
     </tr>
     @endforeach
     <tr>

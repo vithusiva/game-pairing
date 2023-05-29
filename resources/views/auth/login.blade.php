@@ -81,7 +81,6 @@
                       <strong>{{ $errors->first('password') }}</strong>
                       </span>
                       @endif
-                    <a  href="{{ route('password.request') }}" class="tx-12 d-block mg-t-10">Forgot password?</a>
                   </div><!-- form-group -->
 
                   <button class="btn btn-primary pd-y-12 btn-block">Sign In</button>

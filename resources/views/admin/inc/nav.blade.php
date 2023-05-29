@@ -12,7 +12,7 @@
         <li class="br-menu-item">
             <a href="{{route('player.index')}}" class="br-menu-link ">
               <i class="menu-item-icon icon ion-ios-gear-outline tx-24"></i>
-              <span class="menu-item-label">Team Details</span>
+              <span class="menu-item-label">Team/Player Details</span>
             </a><!-- br-menu-link -->
           </li><!-- br-menu-item -->
           <li class="br-menu-item">

@@ -15,10 +15,8 @@
     <div class="col-md-12">
         <table class="table table-striped">
             <tr>
-                <!-- <th>Player ID</th> -->
                 <th>Team Name</th>
                 <th>Score</th>
-                <!-- <th>Opp ID</th> -->
                 <th>Opponent Team Name</th>
             </tr>
             
@@ -28,7 +26,6 @@
                 $oppAvai = array_key_exists($key,$b_players);
             @endphp
             <tr>
-                <!-- <td>  {{$player['id']}}</td> -->
                 <td>  {{$player['namewithInitial']}}</td>
                 <td>
                     <div class="form-group">
@@ -46,7 +43,6 @@
                     </div>
                 </td>
                 @if($oppAvai)
-                    <!-- <td>{{$b_players[$key]['id']}}</td> -->
                     <td>{{$b_players[$key]['namewithInitial']}}</td>
                 @else
                     <td></td>
@@ -62,9 +58,4 @@
     </div>
 </form>
 </div>
-
-
-    <!-- <form action= "{{URL('player')}}" method = "get">
-        <input type ="Submit" value = "Do Next Round" />
-    </form> -->
 @endsection

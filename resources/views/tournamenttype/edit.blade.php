@@ -13,10 +13,13 @@
                 {{csrf_field()}}
                 <div class="row">
                     <div class="form-group col-md-8">
-                            <label for="typename" class="col-form-label">Tournament Type Name</label>
+                            <label for="typename" class="col-form-label">Tournament Type</label>
                             <input type="text" field = "typename" name="typename" id="typename" value="{{$tie->typename}}" class="form-control" required>
                             <span if="fields.hasErrors('typename')" errors="typename" class="text-danger"></span>
-                    </div>    
+                    </div>   
+                    <div class="col-md-6">
+                    <a href = "{{route('tournamenttype.index')}}" class="btn btn-sm btn-info">Back</a>
+            </div> 
                     <div class="col-md-6">
                             <input type = "submit" value ="Update">
                     </div>               

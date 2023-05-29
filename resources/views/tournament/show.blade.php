@@ -12,7 +12,6 @@
                                 <th>Tournament ID</th>
                                 <th>Tournament Name</th>
                                 <th>Tournament Type</th>
-                                
                                 <th>Start Date</th>
                                 <th>End Date</th>
                                 <th>Tiebreak</th>
@@ -20,10 +19,10 @@
                             <tr>
                                 <td> {{$tournament->id}} </td>
                                 <td> {{$tournament->name}} </td>
-                                <td> {{$tournament->type}} </td>
+                                <td> {{optional($tournament->tournamentType)->typename}} </td>
                                 <td> {{$tournament->startDate}} </td>
                                 <td> {{$tournament->endDate}} </td>
-                                <td> {{$tournament->tiebreakname}} </td>
+                                <td> {{optional($tournament->tiebreak)->tiebreak_name}} </td>
                             </tr>
                            
                         </table>

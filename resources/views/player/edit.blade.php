@@ -1,7 +1,7 @@
 @extends('admin.template')
 @section('content')
 <div class="container my-5">
-    <h3> Edit Player</h3>
+    <h3> Edit Team/Player</h3>
     <div class="card">
         <div class="card-body">
             <div class="col-md-10">
@@ -9,12 +9,8 @@
         <input type = "hidden" name = "_method" value = "put">
         {{csrf_field()}}
         <div class="row">
-            <!-- <div class="form-group col-md-8">
-                <label for="playername" class="col-form-label">Full Name</label>
-                <input type="text"  name = "playername" id="playername" value="{{$players->playername}}" class="form-control">
-            </div> -->
             <div class="form-group col-md-8">
-                <label for="namewithInitial" class="col-form-label">Team Name</label>
+                <label for="namewithInitial" class="col-form-label">Team/Player Name</label>
                 <input type="text" name = "namewithInitial" id="namewithInitial"   value="{{$players->namewithInitial}}" class="form-control">
             </div>
             <div class="form-group col-md-8" >
@@ -25,13 +21,9 @@
             <div class="form-group col-md-8">
                 <label for="insitution" class="col-form-label">Insitution</label>
                 <input type="text" name="insitution" id="insitution" value="{{$players->insitution}}" class="form-control">
-            </div>         
-            <!-- <div class="form-group col-md-8">
-                <label for="dob" class="col-form-label">Date of Birth</label>
-                <input type="date" name = "dob" id="dob" value="{{$players->dob}}" class="form-control">
-            </div> -->
+            </div>
             <div class="col-md-6">
-                <a href = "{{route('player.index')}}"class="btn btn-oblong btn-primary btn-block mg-b-10">Back</a>
+                <a href = "{{route('player.index')}}" class="btn btn-sm btn-info">Back</a>
             </div>
             <div class="col-md-6">
                 <input  type = "submit" value ="Update">  

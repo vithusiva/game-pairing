@@ -18,6 +18,9 @@
                             <span if="fields.hasErrors('tiebreak_name')" errors="tiebreak_name" class="text-danger"></span>
                     </div>    
                     <div class="col-md-6">
+                    <a href = "{{route('tiebreak.index')}}" class="btn btn-sm btn-info">Back</a>
+            </div>
+                    <div class="col-md-6">
                             <input type = "submit" value ="Update">
                     </div>               
                 </form>

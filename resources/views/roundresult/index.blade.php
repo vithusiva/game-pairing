@@ -5,10 +5,8 @@
 <tr>
     <th>Tournament Name</th>
     <th>Round Level</th>
-    <!-- <th>Team ID</th> -->
     <th>Team Name</th>
     <th>Team Score</th>
-    <!-- <th>Opponent ID</th> -->
     <th>Opponent Team Name</th>
     <th>Opponent Score</th>
 </tr>
@@ -17,10 +15,8 @@
 <tr>
     <td>  {{$roundresult->tournament->name}} </td>
     <td> {{optional($roundresult->roundLevel)->roundNo}}</td>
-    <!-- <td>  {{$roundresult->playerid}}</td> -->
     <td>  {{$roundresult->playername}}</td>
     <td>  {{$roundresult->playerscore}}</td>
-    <!-- <td>  {{$roundresult->opponentid}}</td> -->
     <td>  {{$roundresult->opponentname}}</td>
     <td>  {{$roundresult->opponentscore}}</td>
 </tr>
