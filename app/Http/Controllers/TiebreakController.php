@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-use App\TieBreak;
+use App\Tiebreak;
 
 
 class TiebreakController extends Controller
@@ -41,7 +41,7 @@ class TiebreakController extends Controller
      */
     public function store(Request $request)
     {
-        $tie = new TieBreak;
+        $tie = new Tiebreak;
         $tie->tiebreak_name = $request->tiebreak_name;
         $tie->save();
 
@@ -69,7 +69,7 @@ class TiebreakController extends Controller
      */
     public function edit($id)
     {
-        $tie = TieBreak::find($id);
+        $tie = Tiebreak::find($id);
         return view('tiebreak.edit', compact('tie'));
         //
     }
@@ -83,7 +83,7 @@ class TiebreakController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $tie = TieBreak::find($id);
+        $tie = Tiebreak::find($id);
         $tie->tiebreak_name = $request->tiebreak_name;
         $tie->update();
 
@@ -99,7 +99,7 @@ class TiebreakController extends Controller
      */
     public function destroy($id)
     {
-        $post = TieBreak::find($id);
+        $post = Tiebreak::find($id);
         $post -> delete();
         return redirect('/tiebreak');
         //
