@@ -13,7 +13,7 @@
     <tr>
         
         <td>  {{$round->roundNo}}</td>
-        <td>  {{$round->tournament->name}}</td>
+        <td>  {{optional($round->tournament)->name}}</td>
         <td>  {{$round->gender}}</td>
         <td>  {{$round->date}}</td>
         <td>
